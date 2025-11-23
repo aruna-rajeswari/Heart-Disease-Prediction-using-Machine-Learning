@@ -50,7 +50,7 @@ This ensured a clean, reliable dataset for further analysis.
 ---
 
 ### 📊 2.3 Statistical Summary  
-Using `df.describe()`, we examined:  
+Using `df.describe()`, I examined:  
 - Central tendency (mean, median)  
 - Dispersion (std deviation, percentiles)  
 - Skewness in multiple health metrics  
