@@ -1,103 +1,206 @@
-Cardiovascular Disease Analysis and Prediction Using Python and Machine Learning
-1. Introduction
-Cardiovascular diseases (CVDs) remain one of the leading causes of death worldwide. Early prediction and an understanding of risk factors are essential for improving patient outcomes. This project uses Python and machine learning to analyze a medical dataset containing over 4,000 patient observations across 14 clinical attributes.
-The main objectives were:
-1.	Determine the factors that significantly contribute to cardiovascular diseases
-2.	Build a predictive machine learning model to estimate heart attack risk
-3.	Visualize insights using Tableau
-By integrating exploratory data analysis (EDA), statistical evaluation, logistic regression modeling, and dashboarding, this project delivers a comprehensive view of CVD risk prediction using modern data analytics tools.
+❤️ Cardiovascular Disease Analysis & Prediction Using Python & Machine Learning
+🧠 1. Introduction
 
-2. Importing, Understanding, and Inspecting Data (Python)
-2.1 Preliminary Data Inspection
-Using Python libraries such as Pandas, NumPy, and Matplotlib/Seaborn, the dataset was explored to determine:
-•	Dataset structure: 4,000+ rows and 14 attributes
-•	Data types: A mix of numerical and categorical features
-•	Missing values: Present in cholesterol and thal-related columns
-•	Duplicate entries: Several duplicate rows were identified
-•	Outliers: Extreme values in resting blood pressure and cholesterol
-2.2 Data Cleaning and Preparation
-Python was used to:
-•	Remove duplicate records
-•	Impute missing values using:
-o	Median or mean for numerical variables
-o	Mode for categorical variables
-•	Check and correct data types
-•	Conduct outlier awareness for sensitive variables
-This ensured a clean and reliable dataset for EDA and modeling.
-2.3 Statistical Summary
-A preliminary summary was generated using df.describe(), providing:
-•	Measures of central tendency (mean, median)
-•	Measures of dispersion (standard deviation, percentiles)
-•	Detection of skewness in several medical metrics
-This summary guided further analysis and feature interpretation.
+Cardiovascular diseases (CVDs) are among the leading global causes of mortality. Early detection and understanding of contributing factors are essential for prevention and improved clinical decisions.
 
-3. Exploratory Data Analysis (EDA in Python)
-3.1 Identification of Categorical Variables
-Categorical features such as sex, chest pain type, fasting blood sugar indicator, exercise-induced angina, and thalassemia were explored using:
-•	Count plots
-•	Bar charts
-•	Frequency tables
-These visualizations provided an overview of patient distributions.
-3.2 CVD Occurrence by Age
-Python visualizations revealed:
-•	Increasing CVD prevalence with age
-•	Highest risk among individuals aged 50 years and above
-3.3 Resting Blood Pressure and Heart Attack Detection
-•	Elevated resting blood pressure showed an association with CVD
-•	However, BP alone was not a definitive predictor
-3.4 Gender Composition
-•	More male patients were present in the dataset
-•	CVD was more common in males, though females showed increased risk with age
+This project analyzes a medical dataset of 4,000+ patient records and 14 clinical attributes using Python, statistical methods, machine learning, and Tableau visualization.
 
-4. In-Depth EDA and Machine Learning Modeling
-4.1 Cholesterol Levels and CVD
-•	Higher cholesterol levels corresponded with increased CVD occurrence
-•	The relationship was nonlinear, indicating the need for multivariate modeling
-4.2 Peak Exercise Metrics
-Using attributes like max heart rate (thalach) and exercise-induced angina:
-•	Lower peak exercise capacity correlated with higher disease risk
-•	Patients with angina during exercise had significantly elevated CVD risk
-4.3 Thalassemia and Other Factors
-Analysis showed:
-•	Certain thalassemia types strongly associated with CVD
-•	Additional influential predictors included age, chest pain type, max heart rate, and resting ECG
-4.4 Pair Plot Analysis
-Using Seaborn’s pairplot:
-•	Multivariate relationships were visualized
-•	Clear distinctions appeared between healthy and diseased individuals
-•	Allowed observation of feature clusters relevant to modeling
-4.5 Logistic Regression Model in Python
-A machine learning model was developed using Python’s scikit-learn library:
-•	Data split into training and testing sets
-•	Logistic Regression model trained on the training data
-•	Predictions generated on the test set
-A confusion matrix and classification metrics were used to evaluate model performance:
-•	Accuracy
-•	Precision
-•	Recall
-•	F1 Score
-The model served as a strong baseline for CVD prediction, demonstrating how machine learning can support clinical decision-making.
+🎯 Project Objectives
 
-5. Visualization and Dashboarding in Tableau
-5.1 Diseased vs Healthy Comparison Dashboard
-A Tableau dashboard was created to illustrate:
-•	Age distribution
-•	Cholesterol and blood pressure levels
-•	Max heart rate achieved
-•	Categorical factors such as chest pain type, gender, and thalassemia
-This helped distinguish key differences between healthy and diseased individuals.
-5.2 Relationship and Risk Factor Dashboard
-The dashboard further demonstrated:
-•	How multiple variables interact
-•	High-risk patterns (e.g., low thalach + high BP)
-•	Feature combinations that strongly correlate with CVD
-Interactive filters provided deeper exploration for different patient subgroups.
+Identify the factors that significantly influence cardiovascular disease
 
-6. Conclusion
-This project successfully combined Python programming, machine learning, and data visualization to analyze cardiovascular disease risk factors and predict heart attack likelihood. Key achievements include:
-•	Comprehensive data cleaning and exploration using Python
-•	Identification of major CVD determinants such as age, cholesterol, chest pain type, and exercise-induced angina
-•	Development of a logistic regression model with strong predictive power
-•	Clear visualization of medical insights using Tableau dashboards
-By integrating analytical and predictive techniques, this project demonstrates how data science can play a critical role in advancing cardiovascular health diagnostics and prevention strategies.
+Build a machine learning model to predict heart attack risk
 
+Visualize medical insights using interactive Tableau dashboards
+
+The project integrates EDA, statistical analysis, logistic regression modeling, and BI visualization to deliver a comprehensive perspective on CVD risk.
+
+📥 2. Importing, Understanding & Inspecting Data (Python)
+🔍 2.1 Preliminary Data Inspection
+
+Using Pandas, NumPy, Matplotlib, and Seaborn, the dataset was evaluated for:
+
+✔ Dataset size: 4,000+ rows, 14 features
+
+✔ Mixed data types (numeric + categorical)
+
+✔ Missing values in cholesterol and thal attributes
+
+✔ Duplicate entries
+
+✔ Outliers in resting blood pressure and cholesterol
+
+🧹 2.2 Data Cleaning & Preparation
+
+Python techniques applied:
+
+Removal of duplicate records
+
+Missing value handling using:
+
+Median/mean for numerical fields
+
+Mode for categorical fields
+
+Data type corrections
+
+Outlier investigation
+
+This created a clean, reliable dataset ready for EDA and modeling.
+
+📊 2.3 Statistical Summary
+
+df.describe() provided:
+
+Central tendency (mean, median)
+
+Variability (standard deviation, percentiles)
+
+Detection of skewness in medical metrics
+
+These insights guided feature engineering and modeling.
+
+🔎 3. Exploratory Data Analysis (EDA in Python)
+🧬 3.1 Categorical Variable Exploration
+
+Categorical fields such as sex, chest pain type, fasting blood sugar, exercise-induced angina, and thalassemia were visualized using:
+
+Count plots
+
+Bar charts
+
+Frequency tables
+
+This helped understand overall patient distributions.
+
+👵🧓 3.2 CVD Occurrence by Age
+
+CVD risk increases significantly with age
+
+Highest prevalence seen in individuals aged 50+
+
+💓 3.3 Resting Blood Pressure vs Heart Attack Risk
+
+Higher BP values showed association with CVD
+
+BP alone is not a strong standalone predictor
+
+🚹🚺 3.4 Gender Composition
+
+More male patients in the dataset
+
+Males show higher CVD prevalence
+
+Females show increasing risk with advancing age
+
+🚀 4. In-Depth EDA & Machine Learning Modeling
+🩸 4.1 Cholesterol Levels
+
+Higher cholesterol values correlate with increased CVD risk
+
+Non-linear patterns → multivariate ML model required
+
+🏃‍♂️❤️ 4.2 Peak Exercise Metrics (Thalach & Angina)
+
+Lower max heart rate (thalach) → higher disease risk
+
+Exercise-induced angina strongly linked to CVD
+
+🧫 4.3 Thalassemia & Other Predictors
+
+Strong associations found with:
+
+Thalassemia type
+
+Age
+
+Chest pain type
+
+Max heart rate
+
+Resting ECG
+
+🔁 4.4 Pair Plot Analysis
+
+Using Seaborn pairplots:
+
+Multi-feature interactions visualized
+
+Clear clusters between healthy vs diseased groups
+
+🤖 4.5 Logistic Regression Model
+
+Machine learning workflow:
+
+Data split into train/test sets
+
+Logistic Regression model trained
+
+Predictions evaluated using:
+
+✔ Accuracy
+
+✔ Precision
+
+✔ Recall
+
+✔ F1 Score
+
+✔ Confusion Matrix
+
+The model performed well as a baseline predictor for CVD.
+
+📊 5. Visualization & Dashboarding (Tableau)
+🖥️ 5.1 Diseased vs Healthy Dashboard
+
+Tableau dashboards visualized:
+
+Age distribution
+
+Cholesterol & blood pressure
+
+Max heart rate
+
+Chest pain type
+
+Gender breakdown
+
+Thalassemia categories
+
+🔗 5.2 Relationship & Risk Factor Dashboard
+
+The dashboard illustrated:
+
+Interactions among multiple variables
+
+High-risk feature combinations
+
+Patterns correlating strongly with CVD
+
+Interactive filters enabled detailed exploration for subgroups.
+
+🏁 6. Conclusion
+
+This project successfully demonstrates how Python, machine learning, and BI tools can provide meaningful insights into cardiovascular diseases.
+
+✔ Key Achievements
+
+Cleaned and explored a comprehensive medical dataset
+
+Identified major CVD determinants:
+
+Age
+
+Cholesterol
+
+Chest pain type
+
+Max heart rate
+
+Exercise-induced angina
+
+Developed a strong baseline predictive model
+
+Built Tableau dashboards for clinical interpretation
+
+This project highlights how data science can support early diagnosis, preventive strategies, and informed medical decisions in cardiovascular healthcare.
