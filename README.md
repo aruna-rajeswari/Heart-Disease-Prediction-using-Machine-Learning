@@ -180,8 +180,4 @@ This project successfully integrates **Python programming, statistical analysis,
 This study highlights how data science can enhance healthcare diagnostics and support preventive strategies.
 
 ---
-
-## 🛠 Tech Stack  
-- **Python** (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)  
-- **Jupyter Notebook**  
-- **Data Visualization using Python**
+---
